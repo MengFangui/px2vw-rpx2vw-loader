@@ -38,7 +38,15 @@ module.exports = function (source) {
     // 返回处理后的内容
     return source.replace(matchPXExp, function (match) {
         // 获取rpx前面的数值
-        var pxValue = parseFloat(match.slice(0, match.length - 3));
-        return (pxValue * ratio * scale).toFixed(6) + 'vw';
+        var pxValue = 0
+        if (unit === 'rpx') {
+            pxValue = parseFloat(match.slice(0, match.length - 3));
+        } else {
+            pxValue = parseFloat(match.slice(0, match.length - 2));
+        }
+        // 只处理数值，NaN不处理
+        if (!isNaN(pxValue)) {
+            return (pxValue * ratio * scale).toFixed(6) + 'vw';
+        }       
     });
 };
