@@ -1,6 +1,6 @@
-# px2vw-rpx2vw-loader
+# px-rpx-vw-loader
 
-px2vw-rpx2vw-loader将项目中的rpx或者px单位转为vw，实现移动端自适应布局。
+px-rpx-vw-loader将项目中的rpx或者px单位转为vw，实现移动端自适应布局。
 
 rpx的使用方法与微信小程序一样。
 
@@ -12,8 +12,8 @@ module.exports = {
         config.module
             .rule('rpx')
             .test(/\.vue$/)
-            .use('px2vw-rpx2vw-loader')
-            .loader('px2vw-rpx2vw-loader')
+            .use('px-rpx-vw-loader')
+            .loader('px-rpx-vw-loader')
             .options({
                 // 根据设计稿尺寸修改，默认是750（iPhone 6）
                 width: 750,
