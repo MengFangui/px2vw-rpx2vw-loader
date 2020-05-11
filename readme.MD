@@ -20,7 +20,9 @@ module.exports = {
                 // 转换单位
                 unit: 'rpx',
                 // 转换比例
-                ratio: 1
+                ratio: 1,
+                // 精度
+                unitPrecision: 6
             })
             .end();
     }
@@ -29,9 +31,10 @@ module.exports = {
 * width的取值是375到2160的正整数，默认是750，即iPhone 6的设计稿尺寸。
 * unit是取值为'rpx' 或者 'px'的字符串，即将文件中的'rpx'或者'px'单位转为vw，默认取值是'rpx'。
 * ratio是转换比例，取值是大于0的数值。对于iPhone 6 750的设计稿，页面采用'rpx'相对单位时，ratio设置为1即可。对于iPhone 6 750的设计稿，页面采用'px'单位时（需要根据设计稿标注的尺寸除以2），ratio设置为2即可，当然也可以按照设计稿直接设计稿上标注的像素值，ratio设置为1。
+* unitPrecision是转换精度，即保留小数点位数,默认是6位。
 
 ## 说明
-vue文件中的template、js和style样式表中的样式单位统一采用rpx或者px，本loader实现转换为vw。
+vue文件中的template、js和style样式表中的样式单位（rpx或者px），本loader均能实现转换为vw。
 
 ### class样式支持
 * 对象语法
@@ -81,7 +84,6 @@ data: {
 [使用方法](https://cn.vuejs.org/v2/guide/class-and-style.html)
 
 ```html
-<!--vue 文件--->
 <template>
     <div class="root" v-bind:class="{ active: isActive }" v-bind:style="{ fontSize: fontSize }"></div>
 </template>
@@ -107,7 +109,6 @@ export default {
 ```
 or
 ```html
-<!--vue 文件--->
 <template>
     <div class="root" v-bind:class="{ active: isActive }" v-bind:style="{ fontSize: fontSize }"></div>
 </template>

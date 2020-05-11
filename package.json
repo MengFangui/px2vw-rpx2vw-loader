@@ -1,21 +1,23 @@
 {
   "name": "px-rpx-vw-loader",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "px-rpx-vw-loader是一个webpack loader，使用rpx作为单位实现屏幕自适应宽度布局。",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MengFangui/px2vw-rpx2vw-loader.git"
+    "url": "git+https://github.com/MengFangui/px-rpx-vw-loader.git"
   },
   "keywords": [
+    "px",
     "rpx",
+    "vw",
     "webpack",
     "loader"
   ],
   "author": "mengfangui <meng010387@126.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MengFangui/px2vw-rpx2vw-loader/issues"
+    "url": "https://github.com/MengFangui/px-rpx-vw-loader/issues"
   },
-  "homepage": "https://github.com/MengFangui/px2vw-rpx2vw-loader#readme"
+  "homepage": "https://github.com/MengFangui/px-rpx-vw-loader#readme"
 }
